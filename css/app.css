@@ -7,6 +7,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-weight: 200;
 }
 
 .stats {
@@ -50,4 +51,12 @@
   font-family: 'Abril Fatface', cursive;
   color: black !important;
   letter-spacing: 2px;
+}
+
+.title {
+  padding-top: 4px;
+}
+
+.author {
+  padding-bottom: 4px;
 }

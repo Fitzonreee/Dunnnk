@@ -25,9 +25,27 @@
               <img ng-src="{{ shot.images.normal }}" />
             </a>
             <strong class="title">{{ shot.title}}</strong>
-            <a href="/players/{{ shot.user.username }}">
+            <a href="/players/{{ shot.user.username }}" class="author">
               {{ shot.user.name }}
             </a>
+            <div class="stats">
+              <span class="stat">
+                <i class="icon-eye-open"></i>
+                {{ shot.views_count }}
+              </span>
+              <span class="stat">
+                <i class="icon-comment"></i>
+                {{ shot.comments_count }}
+              </span>
+              <span class="stat">
+                <i class="icon-heart"></i>
+                {{ shot.likes_count }}
+              </span>
+              <span class="stat">
+                <i class="icon-share-alt"></i>
+                {{ shot.rebounds_count }}
+              </span>
+            </div>
           </div>
         </li>
       </ul>
