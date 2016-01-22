@@ -9,7 +9,6 @@
   text-overflow: ellipsis;
 }
 
-
 .stats {
   background: #CCC;
   opacity: 0.5;
@@ -24,7 +23,6 @@
 .shot_image {
   width: 100%;
 }
-
 
 .shot_header {
   margin-bottom: 20px;
@@ -44,4 +42,12 @@
 .comment img {
   height: 60px;
   width: 60px;
+}
+
+/* My styles */
+
+.brand {
+  font-family: 'Abril Fatface', cursive;
+  color: black !important;
+  letter-spacing: 2px;
 }
