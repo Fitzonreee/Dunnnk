@@ -13,14 +13,26 @@
   </div>
 </div>
 <div class="row">
-  <div class="span6">
+  <div class="span9">
     <img class="shot_image" ng-src="{{ shot.data.images.hidpi }}">
-
+    <!-- comments section -->
     <div class="page-header">
-      <h2>Responses</h2>
+      <h2>{{ comments.data.length }} Comments</h2>
     </div>
     <!-- comments go here -->
-    {{ shot.data.comments_url}}
+    <div ng-repeat = "comment in comments.data" class="media comment">
+      <div class="pull-left">
+        <img class="media-object" ng-src="{{comment.user.avatar_url}}">
+      </div>
+      <div class="media-body">
+        <strong>
+          <!-- <a href="#/players/{{comment.user.username}}"> -->
+            {{comment.user.name}} | {{ comment.created_at | dunnnkDate:"MMM d, yyyy" }}
+          <!-- </a> -->
+        </strong>
+        <p ng-bind-html-unsafe="comment.body"></p>
+      </div>
+    </div>
   </div>
   <div class="span3">
     <ul class="nav nav-list">
@@ -42,8 +54,4 @@
       </li>
     </ul>
     </div>
-  <div class="span3">
-    <h2>Rebounds</h2>
-    <div shot-list="rebounds"></div>
-  </div>
 </div>

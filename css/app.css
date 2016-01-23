@@ -60,3 +60,14 @@
 .author {
   padding-bottom: 4px;
 }
+
+footer {
+  height: 200px;
+  background-color: rgba(223, 223, 223, 0.25);
+  width: 100%;
+  padding: 40px 0 0 0;
+}
+
+.container-fluid {
+  padding: 40px 0 0 0;
+}
