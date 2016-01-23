@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module('dunnnk', ['dunnnk.controllers']);
+var app = angular.module('dunnnk', ['dunnnk.controllers', 'dunnnk.filters']);
 
 app.config(function($routeProvider){
   $routeProvider

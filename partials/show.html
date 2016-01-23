@@ -1,5 +1,49 @@
 <div ng-controller="ShowCtrl">
-  <h1>This is the show page!</h1>
-  <h1>{{shot.data.title}}</h1>
-  <img ng-src="{{ shot.data.images.hidpi }}"/>
+  <div class="media shot_header">
+    <div class="pull-left">
+      <img class="media-object" ng-src="{{shot.data.user.avatar_url}}" >
+    </div>
+    <div class="media-body">
+      <h1>{{shot.data.title}}</h1>
+      <span class="muted">by</span>
+      <a href="#/players/{{shot.data.user.username}}">
+        {{shot.data.user.name}}
+      </a> | {{ shot.data.created_at | dunnnkDate:"MMM d, yyyy" }}
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="span6">
+    <img class="shot_image" ng-src="{{ shot.data.images.hidpi }}">
+
+    <div class="page-header">
+      <h2>Responses</h2>
+    </div>
+    <!-- comments go here -->
+    {{ shot.data.comments_url}}
+  </div>
+  <div class="span3">
+    <ul class="nav nav-list">
+      <li>
+        <i class="icon-heart"></i>
+        {{shot.data.likes_count}} Likes
+      </li>
+      <li>
+        <i class="icon-eye-open"></i>
+        {{shot.data.views_count}} Views
+      </li>
+      <li>
+        <i class="icon-share-alt"></i>
+        {{shot.data.rebounds_count}} Rebounds
+      </li>
+      <li>
+        <i class="icon-comment"></i>
+        {{shot.data.comments_count}} Comments
+      </li>
+    </ul>
+    </div>
+  <div class="span3">
+    <h2>Rebounds</h2>
+    <div shot-list="rebounds"></div>
+  </div>
 </div>
