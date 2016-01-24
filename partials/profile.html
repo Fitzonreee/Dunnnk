@@ -3,26 +3,31 @@
     <img ng-src="{{ user.data.avatar_url }}" class="profile_pic pull-right"/>
   </div>
   <div class="span6 offset1">
-    <h1>{{ user.data.name }}</h1>
-    <h3>{{ user.data.username }}</h3>
+    <h1 id="name">{{ user.data.name }}</h1>
+    <hr>
+    <h3 id="username">{{ user.data.username }}</h3>
     <h6><i class="icon-globe profile_icon"></i>{{ user.data.location }}</h6>
     <p>{{ user.data.bio }}</p>
     <ul class="nav nav-list profile_stats">
       <li>
-        <i class="icon-heart"></i>
-        {{shot.data.likes_count}} Likes
+        <i class="icon-user"></i>
+        {{ user.data.followers_count }} followers
       </li>
       <li>
-        <i class="icon-eye-open"></i>
-        {{shot.data.views_count}} Views
+        <i class="icon-tint"></i>
+        {{ user.data.shots_count }} shots
+      </li>
+      <li>
+        <i class="icon-heart"></i>
+        {{ user.data.likes_received_count }} likes received
       </li>
       <li>
         <i class="icon-share-alt"></i>
-        {{shot.data.rebounds_count}} Rebounds
+        {{ user.data.rebounds_received_count }} rebounds received
       </li>
       <li>
         <i class="icon-comment"></i>
-        {{shot.data.comments_count}} Comments
+        {{ user.data.comments_received_count }} comments received
       </li>
     </ul>
   </div>
