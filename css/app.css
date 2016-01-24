@@ -107,6 +107,11 @@ body {
   margin: 0;
 }
 
+.btn {
+  display: inline-block !important;
+  margin: 5px 0 0 0 !important;
+}
+
 .one-edge-shadow {
   -webkit-box-shadow: 0 8px 6px -6px black;
      -moz-box-shadow: 0 8px 6px -6px black;
