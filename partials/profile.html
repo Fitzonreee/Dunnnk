@@ -1,10 +1,29 @@
 <div class="row">
-  <div class="span3">
-    <img ng-src="{{ user.data.avatar_url }}" class="pull-right"/>
+  <div class="span3 offset1">
+    <img ng-src="{{ user.data.avatar_url }}" class="profile_pic pull-right"/>
   </div>
   <div class="span6 offset1">
-    <h1>{{ user.data.username }}</h1>
-    <h6>{{ user.data.location }}</h6>
+    <h1>{{ user.data.name }}</h1>
+    <h3>{{ user.data.username }}</h3>
+    <h6><i class="icon-globe profile_icon"></i>{{ user.data.location }}</h6>
     <p>{{ user.data.bio }}</p>
+    <ul class="nav nav-list profile_stats">
+      <li>
+        <i class="icon-heart"></i>
+        {{shot.data.likes_count}} Likes
+      </li>
+      <li>
+        <i class="icon-eye-open"></i>
+        {{shot.data.views_count}} Views
+      </li>
+      <li>
+        <i class="icon-share-alt"></i>
+        {{shot.data.rebounds_count}} Rebounds
+      </li>
+      <li>
+        <i class="icon-comment"></i>
+        {{shot.data.comments_count}} Comments
+      </li>
+    </ul>
   </div>
 </div>
