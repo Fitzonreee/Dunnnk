@@ -22,13 +22,14 @@
     <!-- comments go here -->
     <div ng-repeat = "comment in comments.data" class="media comment">
       <div class="pull-left">
-        <img class="media-object" ng-src="{{comment.user.avatar_url}}">
+        <img class="media-object avatar" ng-src="{{comment.user.avatar_url}}">
       </div>
       <div class="media-body">
-        <strong>
-          <!-- <a href="#/players/{{comment.user.username}}"> -->
-            {{comment.user.name}} | {{ comment.created_at | dunnnkDate:"MMM d, yyyy" }}
-          <!-- </a> -->
+        <strong class="comment">
+          <a href="#/players/{{comment.user.username}}">
+            {{comment.user.name}}
+          </a>
+            <span class="date"><i class="icon-calendar" style="margin-left: 6px;"></i> {{ comment.created_at | dunnnkDate:"MMM d, yyyy" }}</span>
         </strong>
         <p ng-bind-html-unsafe="comment.body"></p>
       </div>
