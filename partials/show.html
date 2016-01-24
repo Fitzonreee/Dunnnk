@@ -6,7 +6,7 @@
     <div class="media-body">
       <h1>{{shot.data.title}}</h1>
       <span class="muted">by</span>
-      <a href="#/players/{{shot.data.user.username}}">
+      <a href="#/user/{{shot.data.user.id}}">
         {{shot.data.user.name}}
       </a> | {{ shot.data.created_at | dunnnkDate:"MMM d, yyyy" }}
     </div>
