@@ -99,6 +99,14 @@ body {
   margin-right: 4px;
 }
 
+#name {
+  margin-bottom: 0;
+}
+
+#profile_row {
+  margin: 8px 0 10px 0;
+}
+
 #username {
   background-color: rgba(255, 113, 211, 0.15);
   display: inline-block;
