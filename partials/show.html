@@ -29,7 +29,7 @@
           <a href="#/user/{{comment.user.id}}">
             {{comment.user.name}}
           </a>
-            <span class="date"><i class="icon-hand-right" style="margin-left: 6px;"></i> {{ comment.created_at | dunnnkDate:"MMM d, yyyy" }}</span>
+            <span class="date"><i class="icon-calendar" style="margin-left: 6px;"></i> {{ comment.created_at | dunnnkDate:"MMM d, yyyy" }}</span>
         </strong>
         <p ng-bind-html-unsafe="comment.body"></p>
       </div>
