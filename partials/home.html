@@ -1,7 +1,7 @@
 <div ng-controller="ShotsListCtrl">
   <ul class="thumbnails">
     <li class="shot span3" ng-repeat="shot in list.data">
-      <div class="thumbnail">
+      <div class="thumbnail one-edge-shadow">
         <a href="#/shots/{{ shot.id }}">
           <img ng-src="{{ shot.images.normal }}" />
         </a>
