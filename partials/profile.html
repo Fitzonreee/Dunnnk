@@ -6,8 +6,8 @@
     <h1 id="name">{{ user.data.name }}</h1>
     <hr id="profile_row">
     <h3 id="username">{{ user.data.username }}</h3><a href="{{ user.data.html_url}}" class="btn btn-mini" id="dribbble_profile" target="_blank">View Dribbble Profile</a>
-    <h6 ng-if="user.data.location"><i class="icon-globe profile_icon"></i>{{ user.data.location }}</h6>
-    <h6 ng-if="{{ user.data.location }} == ''"><i class="icon-globe profile_icon"></i>Location unknown</h6>
+    <h6 ng-show="user.data.location"><i class="icon-globe profile_icon"></i>{{ user.data.location }}</h6>
+    <h6 ng-show="!user.data.location"><i class="icon-globe profile_icon"></i>Location not specified :(</h6>
     <p>{{ user.data.bio }}</p>
     <ul class="nav nav-list profile_stats">
       <li>
